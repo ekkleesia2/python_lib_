@@ -1,0 +1,12 @@
+#!/var/lib/openshift/535c1892e0b8cd5f9a00021d/app-root/data/bin/ruby
+
+begin
+  gem 'rdoc'
+rescue NameError => e # --disable-gems
+  raise unless e.name == :gem
+rescue Gem::LoadError
+end
+
+require 'rdoc/ri/driver'
+
+RDoc::RI::Driver.run ARGV

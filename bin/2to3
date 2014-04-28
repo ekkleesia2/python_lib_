@@ -1,0 +1,5 @@
+#!/var/lib/openshift/535c1892e0b8cd5f9a00021d/app-root/data/bin/python2.7
+import sys
+from lib2to3.main import main
+
+sys.exit(main("lib2to3.fixes"))
